@@ -82,15 +82,19 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         name: "description",
         content:
-          "Upload any spreadsheet and get an instant dashboard, AI insights, forecasts, and a chat-with-your-data assistant.",
+          "Drop any CSV or Excel file and get an instant dashboard, AI insights, forecasts, and a chat-with-your-data assistant. Powered by Lovable AI.",
       },
-      { property: "og:title", content: "Lumen — AI Data Analyst" },
+      { property: "og:title", content: "Lumen — AI Data Analyst for CSV & Excel" },
       {
         property: "og:description",
-        content: "Instant dashboards, AI insights, and forecasts from any spreadsheet.",
+        content: "Drop any CSV or Excel file and get an instant dashboard, AI insights, forecasts, and a chat-with-your-data assistant. Powered by Lovable AI.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Lumen — AI Data Analyst for CSV & Excel" },
+      { name: "twitter:description", content: "Drop any CSV or Excel file and get an instant dashboard, AI insights, forecasts, and a chat-with-your-data assistant. Powered by Lovable AI." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/775df674-ce0a-4aa4-87cb-9abed0d55a2d/id-preview-ceb2fa0d--3c2fba9b-e9a3-4437-82ac-a5b93900ae1d.lovable.app-1784034979289.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/775df674-ce0a-4aa4-87cb-9abed0d55a2d/id-preview-ceb2fa0d--3c2fba9b-e9a3-4437-82ac-a5b93900ae1d.lovable.app-1784034979289.png" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },

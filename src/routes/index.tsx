@@ -11,10 +11,10 @@ export const Route = createFileRoute("/")({
         content:
           "Drop any CSV or Excel file and get an instant dashboard, AI insights, forecasts, and a chat-with-your-data assistant. Powered by Lovable AI.",
       },
-      { property: "og:title", content: "Lumen — AI Data Analyst" },
+      { property: "og:title", content: "Lumen — AI Data Analyst for CSV & Excel" },
       {
         property: "og:description",
-        content: "Instant dashboards, AI insights, and forecasts from any spreadsheet.",
+        content: "Drop any CSV or Excel file and get an instant dashboard, AI insights, forecasts, and a chat-with-your-data assistant. Powered by Lovable AI.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
