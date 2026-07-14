@@ -54,8 +54,8 @@ export function Panel({
       {(title || right) && (
         <div className="mb-4 flex items-center justify-between gap-3">
           <div>
-            {title && <div className="font-display text-lg tracking-tight">{title}</div>}
-            {subtitle && <div className="text-xs text-muted-foreground">{subtitle}</div>}
+            {title && <div className="font-display text-lg tracking-tight text-white">{title}</div>}
+            {subtitle && <div className="text-xs text-[#cbd5e1]">{subtitle}</div>}
           </div>
           {right}
         </div>
