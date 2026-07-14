@@ -16,18 +16,18 @@ export function KpiCard({
   const accentClass = {
     primary: "text-primary",
     accent: "text-accent",
-    success: "text-success",
+    success: "text-[#22c55e]",
     warning: "text-warning",
-    destructive: "text-destructive",
+    destructive: "text-[#ef4444]",
   }[accent];
   return (
     <div className="glass group relative overflow-hidden rounded-2xl p-5 transition-all hover:-translate-y-0.5 hover:glow">
       <div className="flex items-start justify-between">
-        <div className="text-xs uppercase tracking-wider text-muted-foreground">{label}</div>
-        {icon && <div className={`opacity-70 ${accentClass}`}>{icon}</div>}
+        <div className="text-xs font-medium uppercase tracking-wider text-[#94a3b8]">{label}</div>
+        {icon && <div className={`opacity-90 ${accentClass}`}>{icon}</div>}
       </div>
-      <div className="mt-2 font-display text-3xl font-medium tracking-tight">{value}</div>
-      {hint && <div className="mt-1 text-xs text-muted-foreground">{hint}</div>}
+      <div className="mt-2 font-display text-3xl font-semibold tracking-tight text-white">{value}</div>
+      {hint && <div className="mt-1 text-xs text-[#cbd5e1]">{hint}</div>}
       <div
         className="pointer-events-none absolute -right-6 -top-6 h-24 w-24 rounded-full opacity-10 blur-2xl transition-opacity group-hover:opacity-25"
         style={{ background: "var(--gradient-primary)" }}
