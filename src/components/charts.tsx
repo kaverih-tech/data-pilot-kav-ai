@@ -28,17 +28,21 @@ const COLORS = [
   "var(--chart-6)",
 ];
 
-const axis = { stroke: "var(--muted-foreground)", fontSize: 11 };
-const grid = { stroke: "var(--border)" };
+const axis = { stroke: "#94a3b8", fontSize: 12, tick: { fill: "#cbd5e1" } };
+const grid = { stroke: "rgba(255,255,255,0.08)" };
 const tooltipStyle = {
   contentStyle: {
-    background: "var(--popover)",
-    border: "1px solid var(--border)",
-    borderRadius: 10,
-    color: "var(--popover-foreground)",
-    fontSize: 12,
+    background: "#111827",
+    border: "1px solid #334155",
+    borderRadius: 12,
+    color: "#ffffff",
+    fontSize: 13,
+    padding: "10px 12px",
+    boxShadow: "0 10px 30px -10px rgba(0,0,0,0.6)",
   },
-  cursor: { fill: "var(--muted)", opacity: 0.2 },
+  labelStyle: { color: "#ffffff", fontWeight: 600, marginBottom: 4 },
+  itemStyle: { color: "#cbd5e1" },
+  cursor: { fill: "rgba(255,255,255,0.06)" },
 };
 
 function fmt(n: number) {
