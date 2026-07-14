@@ -117,7 +117,35 @@
     min-height: 100vh;
     -webkit-font-smoothing: antialiased;
   }
-  h1, h2, h3 { font-family: var(--font-display); letter-spacing: -0.02em; }
+  h1, h2, h3 { font-family: var(--font-display); letter-spacing: -0.02em; color: #ffffff; }
+
+  /* Native select/dropdown — dark menu with white text (WCAG AA) */
+  select {
+    color: #ffffff;
+    background-color: var(--menu-bg);
+  }
+  select option {
+    background-color: var(--menu-bg);
+    color: #ffffff;
+    padding: 8px 10px;
+  }
+  select option:checked,
+  select option:hover {
+    background-color: var(--menu-selected);
+    color: var(--menu-selected-fg);
+  }
+
+  /* Recharts default text — brighten axis / legend for AA contrast */
+  .recharts-cartesian-axis-tick text,
+  .recharts-polar-angle-axis-tick text,
+  .recharts-polar-radius-axis-tick text {
+    fill: #cbd5e1 !important;
+  }
+  .recharts-legend-item-text {
+    color: #ffffff !important;
+    fill: #ffffff !important;
+  }
+  .recharts-tooltip-wrapper:focus { outline: none; }
 }
 
 @utility glass {
