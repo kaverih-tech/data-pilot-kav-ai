@@ -275,12 +275,12 @@ function SelectPill({
 }) {
   if (options.length === 0) return null;
   return (
-    <label className="flex items-center gap-2 rounded-xl border border-border bg-surface px-3 py-1.5 text-xs">
-      <span className="uppercase tracking-wider text-muted-foreground">{label}</span>
+    <label className="flex items-center gap-2 rounded-xl border border-[#334155] bg-[#0f172a] px-3 py-1.5 text-xs shadow-sm">
+      <span className="uppercase tracking-wider text-[#94a3b8]">{label}</span>
       <select
         value={value ?? ""}
         onChange={(e) => onChange(e.target.value || null)}
-        className="bg-transparent text-sm outline-none"
+        className="cursor-pointer bg-transparent text-sm font-medium text-white outline-none focus:ring-2 focus:ring-[#2563eb] rounded"
       >
         <option value="">—</option>
         {options.map((o) => (

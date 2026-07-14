@@ -57,26 +57,41 @@
 
   --card: oklch(0.21 0.028 265 / 0.7);
   --card-foreground: oklch(0.97 0.01 250);
-  --popover: oklch(0.22 0.03 265);
-  --popover-foreground: oklch(0.97 0.01 250);
+  /* #111827 gray-900 */
+  --popover: #111827;
+  --popover-foreground: #ffffff;
+  /* #CBD5E1 slate-300 for secondary text (WCAG AA on dark bg) */
+  --popover-muted: #cbd5e1;
 
   --primary: oklch(0.78 0.16 200);
   --primary-foreground: oklch(0.15 0.02 265);
   --secondary: oklch(0.30 0.04 265);
   --secondary-foreground: oklch(0.97 0.01 250);
   --muted: oklch(0.26 0.03 265);
-  --muted-foreground: oklch(0.70 0.03 260);
+  /* Raised for WCAG AA — was 0.70 (~#9aa0ad); now ~#cbd5e1 */
+  --muted-foreground: #cbd5e1;
   --accent: oklch(0.70 0.18 300);
   --accent-foreground: oklch(0.15 0.02 265);
 
-  --destructive: oklch(0.65 0.22 25);
-  --destructive-foreground: oklch(0.98 0.01 250);
-  --success: oklch(0.75 0.17 155);
+  /* #EF4444 red-500 */
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+  /* #22C55E green-500 */
+  --success: #22c55e;
   --warning: oklch(0.82 0.16 80);
 
-  --border: oklch(1 0 0 / 0.08);
+  --border: oklch(1 0 0 / 0.12);
   --input: oklch(1 0 0 / 0.10);
   --ring: oklch(0.78 0.16 200 / 0.6);
+
+  /* Menu / dropdown palette */
+  --menu-bg: #0f172a;
+  --menu-fg: #ffffff;
+  --menu-muted: #cbd5e1;
+  --menu-border: #334155;
+  --menu-hover: #1e293b;
+  --menu-selected: #2563eb;
+  --menu-selected-fg: #ffffff;
 
   --chart-1: oklch(0.78 0.16 200);
   --chart-2: oklch(0.70 0.18 300);
@@ -102,7 +117,35 @@
     min-height: 100vh;
     -webkit-font-smoothing: antialiased;
   }
-  h1, h2, h3 { font-family: var(--font-display); letter-spacing: -0.02em; }
+  h1, h2, h3 { font-family: var(--font-display); letter-spacing: -0.02em; color: #ffffff; }
+
+  /* Native select/dropdown — dark menu with white text (WCAG AA) */
+  select {
+    color: #ffffff;
+    background-color: var(--menu-bg);
+  }
+  select option {
+    background-color: var(--menu-bg);
+    color: #ffffff;
+    padding: 8px 10px;
+  }
+  select option:checked,
+  select option:hover {
+    background-color: var(--menu-selected);
+    color: var(--menu-selected-fg);
+  }
+
+  /* Recharts default text — brighten axis / legend for AA contrast */
+  .recharts-cartesian-axis-tick text,
+  .recharts-polar-angle-axis-tick text,
+  .recharts-polar-radius-axis-tick text {
+    fill: #cbd5e1 !important;
+  }
+  .recharts-legend-item-text {
+    color: #ffffff !important;
+    fill: #ffffff !important;
+  }
+  .recharts-tooltip-wrapper:focus { outline: none; }
 }
 
 @utility glass {
